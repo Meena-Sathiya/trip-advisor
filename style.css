@@ -1,0 +1,819 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.maincontent {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+/* google font */
+
+body .playfair-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+
+}
+
+/* until search area */
+.navbar__1 {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    color: #143c24;
+    /* wt it means when top of navbar become 0 i want this part constant */
+    position: sticky;
+    top: 0;
+}
+
+.navbar__1left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 25px;
+    vertical-align: bottom;
+    padding-top: 5px;
+}
+
+.navbar__1left img {
+    height: 40px;
+    padding-bottom: 18px;
+
+}
+
+.navbar__1center {
+    display: flex;
+    gap: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.navbar__1right button {
+    margin-top: 10px;
+
+}
+
+.navbar__1right__b1 {
+    background-color: transparent;
+    color: #143c24;
+    border-radius: 7px;
+    border: none;
+    font-weight: 600;
+}
+
+.navbar__1right__b2 {
+    background-color: #143c24;
+    color: white;
+    border-radius: 20px;
+    font-weight: 600;
+    padding: 10px;
+    margin-left: 20px;
+
+
+}
+
+.navbar__1home {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    margin: 10px;
+    font-size: 50px;
+    color: #143c24;
+}
+
+.navbar__2 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 20px;
+    color: #143c24;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+.navbar__2 p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* this means when hover only border will show */
+.navbar__2 p:hover {
+    border-bottom: #143c24 solid 2px;
+}
+
+/* this means border will show constantly */
+.navbar__2__borderactive {
+    border-bottom: #143c24 solid 2px;
+}
+
+/*want image and para base line same first I make para element as flex box then allign image or else cant able to adjust img/ why p is flex box not img
+becoz image is a single element — it doesn’t have child elements inside it. Flexbox works on parent elements to control how their children behave.
+Since <img> has no children, display: flex has no effect. Thats why we make p as parent and img as child so that we can able to contrl img */
+.navbar__2 p img {
+    width: 22px;
+    height: 22px;
+
+}
+
+.navbar__3 {
+    display: flex;
+    background-color: white;
+    color: black;
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+    border: solid black 1px;
+    border-radius: 30px;
+    width: 80%;
+    margin-left: 110px;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.navbar__3 input {
+    flex-grow: 1;
+    /*already its inside one div bt i want button  right end so by giving flex grow itw will take all place except button space*/
+    border: none;
+    background-color: transparent;
+    gap: 10px;
+    font-size: 15px;
+
+}
+
+/* its kind of mouse hover.. when using hover code we use to mention classname:hover{and task} like this when input get focus i make 
+input outline is none */
+.navbar__3 input:focus {
+    outline: none;
+}
+
+.navbar__3__button {
+    padding: 10px;
+    margin: 2px;
+    border-radius: 25px;
+    background-color: rgb(45, 197, 45);
+    color: black;
+}
+
+/* video */
+
+.videopartsplit {
+    display: flex;
+    background-color: #00eb5b;
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 5px;
+    align-items: center;
+
+
+}
+
+.videopartsplit video {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    border-radius: 6px;
+}
+
+.videopartsplit__rightside {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.videopartsplit__rightside button {
+    width: fit-content;
+    margin-left: 250px;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+
+}
+
+.videopartsplit__rightside button:hover {
+    cursor: pointer;
+    background-color: palevioletred;
+    transition-duration: 1s;
+}
+
+
+/* finding things */
+/* i didn't give hover but i got that how? image tag is inside an anchor tag (<a href="..." ...>).The <a> (anchor) element by default has the 
+cursor style cursor: pointer in browsers. */
+.findthings {
+    padding: 2px;
+    padding-top: 20px;
+}
+
+/* why marigin top and bottom-0 because for whole body i change margin and padding that affect this are so i specically give here for allignment */
+.findthings h2 {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.findthings p {
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-top: 0;
+}
+
+.findthings__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 1px;
+}
+
+.container {
+    flex-basis: 15%;
+    flex-grow: 1;
+    position: relative;
+    /*if this box is realtive then i can make img text absolute so that i can get para on image*/
+}
+
+.container a {
+    position: relative;
+}
+
+.imgtext {
+    position: absolute;
+    bottom: 5px;
+    color: darkorange;
+    padding-right: 0px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+    /*no need because my parent container is already flex if container is flex or grid child follow the parrent/when it need if our container is not flex or grid on that time if we crease any card for image its helps to remove unwanted spaces fix the image insdie of card perferctly */
+}
+
+/* explore */
+.explore {
+    padding: 2px;
+    padding-top: 30px;
+}
+
+.explore h2,
+.explore p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.explore h2 {
+    font-size: 30px;
+}
+
+.explore__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 20px;
+}
+
+.container1 {
+    flex-basis: 10%;
+    flex-grow: 1;
+}
+
+.container1 img {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+}
+
+.container1 p {
+    color: #143c24;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.container1__rating {
+    color: #143c24;
+    font-size: small;
+    font-weight: 100;
+}
+
+/*  I gave regular method it wont work so i tried to focus directly */
+
+.container1 p.container1__price {
+    font-size: 18px;
+}
+
+/* group */
+/* flex basis and flex grow din't give if i give also visually no change because it works only when group of container in single group(div) */
+.groupphoto {
+    display: flex;
+    padding-top: 100px;
+    position: relative;
+    flex-wrap: wrap;
+    /* if i gave height here means i wont get extra space in the div or because i reduce image size height to 70% so i got extra space if i mentioned height 
+    here i can able to reduce extra space */
+    height: 600px;
+}
+
+.groupphoto img {
+    width: 100%;
+    height: 90%;
+    border-radius: 20px;
+}
+
+.groupphoto p {
+    display: flex;
+    position: absolute;
+    font-size: 50px;
+    /* we dont need to mention margin top when we use absolute,insted of using top is enough */
+    top: 490px;
+    color: white;
+    padding-left: 20px;
+}
+
+.groupphoto button {
+    display: flex;
+    position: absolute;
+    top: 550px;
+    border-radius: 25px;
+    padding: 10px;
+    color: white;
+    background-color: #257443;
+    margin-left: 20px;
+    animation-name: click;
+    animation-duration: 3s;
+    /*If I Remove this animation happen with shaking effect. this is used to maintain the element stays in the final (100%) state of the animation.
+    here we dont need this becuase after animation it won't stay in that postition here i gave loop mode bt if i remove here button will shaky*/
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+
+}
+
+.groupphoto button:hover {
+    cursor: pointer;
+}
+
+@keyframes click {
+    0% {
+        transform: scaleY(0.1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+/* smalldiv */
+.smalldiv {
+    display: flex;
+    gap: 40px;
+    background-color: ivory;
+
+}
+
+.smalldiv:hover {
+    cursor: pointer;
+}
+
+/* first i change this small div width into 30% means it take 30% space from parent div balance will go next div */
+.smalldiv__img {
+    width: 30%;
+}
+
+/* if i didn't make smalldiv__img width small previousely, here i have to give width in px like width:300px not in %. becoz if I gave as % for img it consider width size from
+smalldiv__img not from parent*/
+.smalldiv__img img {
+    width: 100%;
+    height: auto;
+    border-radius: 28px;
+    /* by using this i rotate image , if img got cut i can able to use overflow:hidden*/
+    transform: rotate(-8deg);
+    padding: 5px;
+    margin: 20px;
+}
+
+.smalldiv__rightside {
+    flex-grow: 1;
+    border-left: 1px solid antiquewhite;
+    padding-left: 20px;
+}
+
+.smalldiv__rightside button,
+h3 {
+    margin-top: 40px;
+    padding: 5px;
+}
+
+/* if i mentioned this in above line correction apply to group photo para also */
+.smalldiv__p {
+    margin-top: 40px;
+}
+
+.smalldiv__corner {
+    margin-top: 160px;
+    background-color: ivory;
+    margin-right: 30px;
+}
+
+.smalldiv__corner button {
+    padding: 15px;
+    border-radius: 30px;
+    transition-duration: 1s;
+}
+
+.smalldiv__corner button:hover {
+    cursor: pointer;
+    background-color: #00eb5b;
+}
+
+/* footer */
+.footer {
+    background-color: whitesmoke;
+}
+
+/* I dint wrap if i wrap here it wont wrk good in mob */
+.footer1 {
+    display: flex;
+    margin: 10px;
+    padding-right: 200px;
+    padding-left: 200px;
+    background-color: #f7f7f7;
+    color: rgb(63, 59, 59);
+    gap: 60px;
+
+}
+
+/* by giving inherit means regular blue color  for link removed and addept the souurounding color/text decoration none because default link have underline
+I already add border so I removes default decoration */
+.footer1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer1__rightside {
+    /* which menas it pushes this div to right end of the footer1 */
+    margin-left: auto;
+    padding-right: 20px;
+    row-gap: 10px;
+}
+
+.footer1 h4,
+p {
+
+    margin-top: 10px;
+}
+
+.footer1__rightside h4,
+p {
+    margin-top: 10px;
+}
+
+/* here i gave text decoration underline because for whole footer1 i gave decoration none bt i wnat this particular part so i gave here */
+.footer1__rightside a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* why i add here if i mention directly on hover when i hover next para go down slightly becoz of adding boder bt defaultly i added new when i hover next para not go down  */
+.footer1 p span {
+    border-bottom: solid 2px transparent;
+}
+
+.footer1 p span:hover {
+    border-bottom: solid 2px rgb(8, 42, 8);
+    cursor: pointer;
+}
+
+/* footer2 */
+.footer2 {
+    background-color: whitesmoke;
+    margin-left: 0;
+    margin-right: 0;
+
+
+}
+
+.footer2 {
+    display: flex;
+    background-color: whitesmoke;
+}
+
+.footer2__1 img {
+    width: 90%;
+    height: 70%;
+}
+
+/* i want this should occupy space next to logo sp gave flex grow1/ and padding top bottom 0-right left 25px */
+.footer2__2 {
+    flex-grow: 1;
+    padding: 0px 25px;
+}
+
+.footer2__2 p {
+    margin: 0 10;
+    font-size: 17px;
+}
+
+.footer2__2__para {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer2__2__para a {
+    color: #143c24;
+}
+
+.footer2__rightside {
+    display: flex;
+    gap: 10px;
+    /* i remove margin if we give margin it push tha button to next line */
+}
+
+.footer2__buttons select {
+    padding: 6px 12px;
+    border-radius: 15px;
+    border: solid 1px black;
+    background-color: aliceblue;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.footer2__icons {
+    display: flex;
+    gap: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.footer2__3 {
+    padding: 10px;
+    padding-right: 200px;
+    padding-left: 200px;
+}
+
+/* media query */
+/* desktop */
+@media screen and (min-width:1025px) {
+    .footer2__rightside{flex-direction: column;margin-right: 200px;}
+    .footer2__1 {margin-left: 200px;}
+}
+   
+
+
+/* tab */
+
+
+@media screen and (min-width:701px) and (max-width:1024px) {
+    .body {
+        font-size: 12px;
+    }
+    .maincontent{margin: 10px;padding: 10px;}
+
+    /* 1.navbar */
+    .navbar__2 {
+        font-size: 16px;
+        gap: 20px;
+    }
+
+    .navbar__3 {
+        width: 95%;
+        margin-left: 10px;
+    }
+
+    /* 2.video */
+    .videopartsplit {
+        align-items: center;
+        padding: 2px;
+        height: 400px;
+
+    }
+
+    .videopartsplit__rightside {
+        margin-top: 2px;
+        padding: 0px;
+    }
+    .videopartsplit__rightside h1{font-size: 30px;}
+
+    .videopartsplit__rightside button {
+        margin-left: 10px;
+    }
+
+    /* 3.grpphoto */
+    .groupphoto {
+        margin-top: 20px;
+    }
+
+    /* 4.footer */
+
+    .footer1 {
+        width: fit-content;
+        padding: 10px;
+        gap: 40px;
+
+    }
+
+
+    .footer2 {
+        padding: 0px;
+
+    }
+
+    .footer2__rightside {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /*by adding direction colum i get icon in next line*/
+    .footer2__buttons {
+        display: flex;
+        gap: 4px;
+    }
+
+    /*I changed this display flex to geth 2 button near*/
+
+    .footer2__3 {
+        margin: 10px;
+        padding: 10px;
+    }
+
+}
+
+
+/* mobile */
+/* 1.navbar */
+@media screen and (max-width:700px) {
+    .navbar__2 {
+        font-size: 13px;
+        gap: 20px;
+    }
+    .maincontent{margin: 0px;padding: 0px;}
+
+}
+
+/* 2.remove navbar center and right give home button */
+@media screen and (max-width:700px) {
+    .navbar__1left {
+        padding-left: 1px;
+    }
+
+    .navbar__1center,
+    .navbar__1right {
+        display: none;
+    }
+
+    .navbar__1home {
+        display: block;
+        padding-top: 10px;
+    }
+
+    .navbar h1 {
+        display: none;
+    }
+
+    .navbar__3 {
+        width: 95%;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    .navbar__3__button {
+        display: none;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .body {
+        font-size: 10px;
+    }
+
+}
+
+/* 3.video */
+@media screen and (max-width:700px) {
+    .videopartsplit video {
+        width: 100%
+    }
+
+}
+
+@media screen and (max-width:700px) {
+    .videopartsplit {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+        height: 400px;
+
+    }
+
+    .videopartsplit__rightside h1 {
+        font-size: 30px;
+    }
+
+
+    .videopartsplit__rightside button {
+        display: none;
+    }
+
+
+}
+
+
+/*4. findthings */
+@media screen and (max-width:700px) {
+    .container {
+        flex-basis: 40%;
+    }
+
+    .container1 {
+        flex-basis: 40%;
+    }
+
+    .container1 p {
+        font-size: 16px;
+    }
+
+    .container1__price {
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width:700px) {
+    .container {
+        flex-basis: 40%;
+        gap: 5px;
+    }
+
+    .container1 {
+        flex-basis: 40%;
+    }
+
+    .container1 p {
+        font-size: 14px;
+    }
+
+    .container1__price {
+        display: none;
+    }
+}
+
+/* 5.groupphoto */
+
+@media screen and (max-width:700px) {
+    .groupphoto {
+        height: fit-content;
+        padding-top: 20px;
+    }
+
+    .groupphoto button,
+    .groupphoto p {
+        display: none;
+    }
+
+}
+
+/* 6.footer */
+
+
+@media screen and (max-width:700px) {
+    .footer1 {
+        width: fit-content;
+        padding: 10px;
+        gap: 10px;
+
+    }
+
+
+    .footer2 {
+        padding: 0px;
+
+    }
+
+    .footer2__rightside {
+        align-items: center;
+    }
+
+    .footer2__buttons {
+        display: flex;
+        gap: 4px;
+    }
+
+    /*I changed this display flex to geth 2 button near*/
+    .footer2__3,
+    .footer2__icons {
+        display: none;
+    }
+}
